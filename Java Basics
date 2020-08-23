@@ -1,0 +1,317 @@
+package com.company;
+
+import java.awt.*;
+import java.text.NumberFormat;
+import java.util.Arrays;
+import java.util.Date;
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        //Types
+            // Primitive types: Copy by there values
+                /*byte age = 30;
+                long viewCount = 3_123_456_789L;
+                float Price = 10.99F;
+                char letter = 'A';
+                boolean isEligible = false;*/
+
+            // Non Primitive types: Copy by there references
+                /*Date now = new Date(); //When using Reference type or Non-Primitive type of data we need to allocate memory for them.
+                System.out.println(now);
+                Point point1 = new Point(1, 1);
+                Point point2 = point1;
+                point1.x = 2;   //when I change value in point 1 value in point 2 change as well.
+                System.out.println(point2);*/
+
+                // Strings
+                    //String message = new String("Hello world" + "!!");
+                    //String message1 = "Hello World";
+
+                    //System.out.printf(message);
+                    //System.out.printf(" " + message1);
+                    //System.out.printf(" " + message.endsWith("!!")); //It is a boolean experation
+                    //System.out.printf(" " + message.startsWith("!!"));
+                    //System.out.printf(" " + message.length()); //show the length of the string.
+                    //System.out.printf(" " + message.indexOf("e")); //tell as the index of the string. if it gives (-1) means letter is not in the string.
+                    //System.out.printf(" " + message.replace("!", "*"));
+                    //System.out.printf(" " + message); //Strings are immutable
+                    //System.out.printf(" " + message.toLowerCase());
+                    //System.out.printf(" " + message.toUpperCase());
+                    //System.out.printf(" " + message.trim());    //remove extra white spaces
+                    //System.out.printf("Hello \" bro\n");    //'\' provide us access to use special symbols in the strings
+                    //System.out.printf("C\\aush\\java\\basic..\n");    //And when we want to use 'back-slash' for that as well we use back-slash
+
+        // Array //A Referance type
+            /*int[] numbers = new int[5]; //Here 5 is the size of the array
+            numbers[0] = 1;  //Here array is initialising on the index
+            numbers[1] = 3;  //old way*/
+
+            /*int[] numbers = { 23, 13, 4, 5, 6 };
+            Arrays.sort(numbers);
+            //System.out.println(numbers[0]); //Calling the array same way as in C++ and python
+            System.out.println(Arrays.toString(numbers));
+            System.out.println(numbers.length);*/
+
+
+        // Multi-Dimentional Array
+            /*int [][] numbers1 = new int [2][3];
+            numbers1 [0][0] = 1; */
+
+            //int [][] numbers1 = { {1,2,3} , {9,8,7} };
+            //System.out.println(Arrays.deepToString(numbers1));  //deepToString is used for multi dimentional arrays
+
+        // Constants
+            //final float pi = 3.14F;   //'final' is used to make variables constant.
+
+        // Arithmetic Operations
+            // + , - , * , / , %
+            //float result = 10/3;    //In java division always gives a whole number
+            //double result1 = (double)10 / (double) 3;   //We can cast the type of data in this way.
+            //System.out.println(result1);
+
+            // Increment and decrement
+            //int x = 1;
+            //x++;
+            //System.out.println(x);
+            //x--;
+            //System.out.println(x);
+
+            //Order of operations
+                //'()' , '*/' , '+-'
+
+        // Casting   //TYPE conversion
+            // Implicit Casting: Automatic casting, From low to high e.g. int -> double
+            // byte -> short -> int -> long -> float -> double  // Left to right
+
+            // Explicit Casting: Manual, In same category of data e.g number , strings // Numbers can not convert into strings
+            /*String x = "1";
+            int y = Integer.parseInt(x) + 2;    // Interger is return data type and parshInt methord convert the value into int, We can do the same for double, short etc.
+            System.out.println(y);
+            String x1 = "1.1";
+            double y1 = Double.parseDouble(x1) + 2;
+            System.out.println(y1);*/
+
+        // Math Class
+            //int result = Math.round(1.1F);    // Round off the number
+            //int result = (int)Math.ceil(1.2F);    // Round off the number into closest higher integer
+            //int result = (int)Math.floor(1.6F);   // Round off the number into closest higher integer
+            //System.out.println(result);
+
+            //int result = Math.max(2,5);
+            //int result = Math.min(2,5);
+            //int result = (int) (Math.round(Math.random() * 10));
+            //int result = (int) Math.random() * 10;   // If we convert the random num into round num then it will give always 0 as first round function cast into round so it
+                                                    // becomes 0 and after multiplying it remains 0.
+            //System.out.println(result);
+
+        // Formatting Number
+            //NumberFormat currency = NumberFormat.getCurrencyInstance();
+            //String result = currency.format(1234567.891);
+            //System.out.println(result);
+
+            //NumberFormat percent = NumberFormat.getPercentInstance();
+            //String result1 = percent.format(0.1);
+            //System.out.println(result1);
+
+        // Reading Input
+            /*System.out.print("What is your age: "); //println change the line by default, so we are using print which do not.
+            Scanner scanner = new Scanner(System.in);
+            byte age = scanner.nextByte();
+            System.out.println("You are " + age + " years old.");
+
+            System.out.print("What is your Name: "); //println change the line by default, so we are using print which do not.
+            Scanner scanner1 = new Scanner(System.in);
+            String Name = scanner1.nextLine().trim();
+            System.out.println("You are " + Name ); */
+
+ /*****/// Project: Mortgage Calculator
+            /*
+            final byte MONTHS_IN_YEAR = 12;
+            final byte PERCENT = 100;
+
+            Scanner scanner = new Scanner(System.in);
+
+            System.out.print("Principle: ");
+            int PRINCIPLE = scanner.nextInt();
+
+            System.out.print("Annual Interest Rate: ");
+            float ANNUAL_INTEREST_RATE = scanner.nextFloat();
+            float MONTHLY_INTEREST_RATE = ANNUAL_INTEREST_RATE / PERCENT / MONTHS_IN_YEAR;
+
+            System.out.print("Period (Years): ");
+            float ANNUAL_PERIOD = scanner.nextShort();
+            float MONTHLY_PERIOD = ANNUAL_PERIOD * MONTHS_IN_YEAR;
+
+            double MORTGAGE = PRINCIPLE
+                            * ( MONTHLY_INTEREST_RATE * Math.pow( 1 + MONTHLY_INTEREST_RATE, MONTHLY_PERIOD ) )
+                            / ( Math.pow( 1 + MONTHLY_INTEREST_RATE, MONTHLY_PERIOD ) - 1 );
+
+            NumberFormat MORTGAGE_FORMATTING = NumberFormat.getCurrencyInstance();
+            String MORTGAGE_FORMATTING_VAL = MORTGAGE_FORMATTING.format(MORTGAGE);
+
+            System.out.print("Mortgage: " + MORTGAGE_FORMATTING_VAL);
+            */
+
+        // Comparision Operators
+            //int x = 1;
+            //int y = 1;
+            //System.out.println(x==y);
+            // '==' , '!=' , '<=' , '>='
+
+        // Logical Operator
+            //int temp = 22;
+            //boolean iswarm = temp>20 && temp <40;
+            //System.out.println(iswarm);
+            //  '&& --> And' , '|| --> Or' , '! --> Not'
+
+        // If Statement
+            /*int temp = 32;
+            if (temp>30){
+                System.out.println("It's a hot day!!");
+                System.out.println("Drink a lot of Water");
+            }
+            else if (temp>20)
+                System.out.println("Beautiful Day");
+            else
+                System.out.println("Cold Day");*/
+
+                // Better way
+                    //int income = 120_000;
+                    //boolean isHighIncome = (income > 100_000);    // Use conditions directly in boolean instead of if and else.
+                    //System.out.println(isHighIncome);
+
+            //int income = 120_000;
+            //String ClassName = "Economy";   // Use default values in mutable data-types instead of using else.
+            //if (income>100_000)
+                //ClassName = "First";
+            //System.out.println(ClassName);
+
+                // Better Way
+                    //int income = 120_000;
+                    //String ClassName = income > 100_000 ? "First" : "Economy";
+                    // after '=' "First" execute when condition is true otherwise "Economy" will execute
+
+            // Switch Statement
+                /*String role = "Admin";
+                switch (role){
+                    case "Admin":
+                        System.out.println("You're an Admin");
+                        break;
+                    case "Moderate":
+                        System.out.println("You're a Moderate");
+                        break;
+                    default:
+                        System.out.println("You're a Guest");
+                } */
+
+  /*****/    // Project: FizzBuzz
+                /*Scanner scanner = new Scanner(System.in);
+
+                System.out.print("Number: ");
+                int NUMBER_VAL = scanner.nextInt();
+
+                if (NUMBER_VAL % 5 == 0 && NUMBER_VAL % 3 == 0)
+                        System.out.print("FizzBuzz");
+                else if (NUMBER_VAL % 3 == 0)
+                    System.out.println("Buzz");
+                else if (NUMBER_VAL % 5 == 0)
+                    System.out.println("Fizz");
+                else
+                    System.out.println(NUMBER_VAL);*/
+                    // Try to avoid nesting do when it is necessary because nesting makes your code more complicated.
+
+            // For Loop
+                //for (byte i = 0; i<5 ; i++)
+                //    System.out.println("Hello World");
+
+            // While Loop
+                /*int i = 5;
+                while (i>0){
+                    System.out.println("Hello World " + i);
+                    i--;
+                }*/
+
+                    // Use while loop when we don't know how many times we should repeat.
+                    // Conditions like if user not type EXIT enter the loop and if he type EXIT leave the loop.
+                    // In java we can't compair strings directly becouse if both strings have same strings value but on different address then for java this are not same string.
+                    // So we use equals Methord.
+
+                //String input = "A";
+                //Scanner scanner = new Scanner(System.in);
+                /*while (true){   // If the while loop contains break statement use true so it runs always and exit the loop when break function calls.
+                                // otherwise it will turn into infinite loop.
+                    System.out.print("Input: ");
+                    input = scanner.next().toUpperCase();
+                    if (input.equals("EXIT"))
+                        break;          // Exit the loop or scope
+                    else if (input.equals("PASS"))
+                        continue;       // Restart the loop
+                    System.out.println(input);
+                }*/
+
+            // Do While loop
+                /*Scanner scanner = new Scanner(System.in);
+                String input = "A";
+                do {
+                    System.out.print("Input: ");
+                    input = scanner.next().toUpperCase();
+                    System.out.println(input);
+
+                } while (!input.equals("EXIT"));*/
+
+            // For Each loop
+                /*String[] fruits = {"Apple", "Banana", "Mango"};
+                for (String fruit: fruits)
+                    System.out.println(fruit);*/
+
+                    //  Limitations
+                    // Only one way output index 0-n unlike for loop
+
+    /****/ // Mortgage Calculator
+                /*final byte MONTHS_IN_YEAR = 12;
+                final byte PERCENT = 100;
+
+                Scanner scanner = new Scanner(System.in);
+                int PRINCIPLE;
+                int MONTHLY_PERIOD;
+                float MONTHLY_INTEREST_RATE;
+
+                while (true) {
+                    System.out.print("Principle (1K - 1M): ");
+                    PRINCIPLE = scanner.nextInt();
+                    if (PRINCIPLE >= 1000 && PRINCIPLE <= 1000000)
+                        break;
+                    System.out.println("Enter a number greater than 1000 and less than 1000000.");
+                }
+
+                while (true) {
+                    System.out.print("Annual Interest Rate: ");
+                    float ANNUAL_INTEREST_RATE = scanner.nextFloat();
+                    MONTHLY_INTEREST_RATE = ANNUAL_INTEREST_RATE / PERCENT / MONTHS_IN_YEAR;
+                    if (ANNUAL_INTEREST_RATE > 0 && ANNUAL_INTEREST_RATE <= 30)
+                        break;
+                    System.out.println("Enter a number between 0 and 30.");
+                }
+
+                while (true) {
+                    System.out.print("Period (Years): ");
+                    int ANNUAL_PERIOD = scanner.nextShort();
+                    MONTHLY_PERIOD = ANNUAL_PERIOD * MONTHS_IN_YEAR;
+                    if (ANNUAL_PERIOD > 0 && ANNUAL_PERIOD <= 30)
+                        break;
+                    System.out.println("Enter a number between 0 and 30.");
+                }
+                double MORTGAGE = PRINCIPLE
+                        * ( MONTHLY_INTEREST_RATE * Math.pow( 1 + MONTHLY_INTEREST_RATE, MONTHLY_PERIOD ) )
+                        / ( Math.pow( 1 + MONTHLY_INTEREST_RATE, MONTHLY_PERIOD ) - 1 );
+
+                NumberFormat MORTGAGE_FORMATTING = NumberFormat.getCurrencyInstance();
+                String MORTGAGE_FORMATTING_VAL = MORTGAGE_FORMATTING.format(MORTGAGE);
+
+                System.out.print("Mortgage: " + MORTGAGE_FORMATTING_VAL);*/
+
+    }
+
+}
